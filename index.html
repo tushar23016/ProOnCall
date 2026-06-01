@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ProOnCall</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#050505;
+    --card:#111111;
+    --primary:#8b5cf6;
+    --secondary:#a855f7;
+    --text:#ffffff;
+    --muted:#b3b3b3;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,.8);
+    backdrop-filter:blur(12px);
+}
+
+.nav-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-circle{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:700;
+    box-shadow:0 0 20px var(--primary);
+}
+
+.logo h2{
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at center,
+    rgba(139,92,246,.25),
+    transparent 60%);
+}
+
+.hero-content{
+    width:100%;
+    position:relative;
+    z-index:2;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero span{
+    color:var(--primary);
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    color:var(--muted);
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 32px;
+    border-radius:40px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+    );
+    box-shadow:0 0 25px rgba(139,92,246,.5);
+}
+
+/* FEATURES */
+
+section{
+    padding:100px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:var(--card);
+    padding:30px;
+    border-radius:18px;
+    border:1px solid rgba(139,92,246,.2);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(139,92,246,.3);
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+/* SERVICES */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.service{
+    background:#0d0d0d;
+    border-radius:16px;
+    padding:25px;
+}
+
+/* PRICING */
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.price-card{
+    background:var(--card);
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+}
+
+.price-card h3{
+    color:var(--primary);
+}
+
+.price{
+    font-size:2rem;
+    margin:15px 0;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px 0;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.1);
+}
+
+footer p{
+    color:var(--muted);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero p{
+    font-size:14px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+<div class="container nav-content">
+
+<div class="logo">
+<div class="logo-circle">PO</div>
+<h2>ProOnCall</h2>
+</div>
+
+<a href="#services" class="btn">Get Started</a>
+
+</div>
+</nav>
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<h1>Instant Expert Help <span>On Call</span></h1>
+
+<p>
+Affordable virtual and on-site support for home,
+tech, appliance, furniture and repair services.
+Get connected with verified professionals in minutes.
+</p>
+
+<a href="#pricing" class="btn">Book Service</a>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+<h2>Why ProOnCall?</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Virtual Support</h3>
+<p>Get expert help instantly through video or voice calls.</p>
+</div>
+
+<div class="card">
+<h3>Affordable Pricing</h3>
+<p>Services start from just ₹49 with transparent pricing.</p>
+</div>
+
+<div class="card">
+<h3>Verified Experts</h3>
+<p>Trusted professionals with ratings and reviews.</p>
+</div>
+
+<div class="card">
+<h3>Fast Booking</h3>
+<p>Instant scheduling with real-time tracking.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Services</h2>
+</div>
+
+<div class="services-grid">
+
+<div class="service">
+<h3>Tech Support</h3>
+<p>Laptop, printer, Wi-Fi and Smart TV assistance.</p>
+</div>
+
+<div class="service">
+<h3>Home Repairs</h3>
+<p>Switches, fans, lights and plumbing issues.</p>
+</div>
+
+<div class="service">
+<h3>Furniture Assembly</h3>
+<p>Installation and setup support.</p>
+</div>
+
+<div class="service">
+<h3>Appliance Help</h3>
+<p>Microwave, refrigerator and purifier troubleshooting.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+<section id="pricing">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Pricing Plans</h2>
+</div>
+
+<div class="pricing">
+
+<div class="price-card">
+<h3>Virtual Help</h3>
+<div class="price">₹49+</div>
+<p>Quick video assistance.</p>
+</div>
+
+<div class="price-card">
+<h3>Quick Fix</h3>
+<div class="price">₹199+</div>
+<p>Short on-site service.</p>
+</div>
+
+<div class="price-card">
+<h3>Standard Visit</h3>
+<div class="price">₹399+</div>
+<p>Most common service jobs.</p>
+</div>
+
+<div class="price-card">
+<h3>Premium</h3>
+<div class="price">₹699+</div>
+<p>Large and complex tasks.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+<h2>ProOnCall</h2>
+<p>Affordable Expert Help Anytime, Anywhere.</p>
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
